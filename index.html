@@ -28,6 +28,13 @@
 
                     <p v-if="onSale" class="sale-status">On Sale!</p>
                     <p v-else class="not-sale-status">Not on Sale</p>
+
+                <ul>
+                    <li v-for="detail in details">{{detail}}</li>
+                </ul>
+                <div v-for="variant in variants" :key="variant.id">
+                    {{ variant.color }}
+                </div>
                 <h1><a v-bind:href="link" target="_blank">{{ product1 }}</a ></h1>
                 <!-- <h1>{{product}}</h1> -->
         </div>
